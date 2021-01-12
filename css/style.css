@@ -1,0 +1,11 @@
+* {
+    font-family: "Raleway", sans-serif;
+  }
+  body {
+    margin: 0 auto;
+    position: relative;
+  }
+  .container {
+    font-size: medium;
+    margin: 50px;
+  }
