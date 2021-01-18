@@ -1,3 +1,4 @@
+@import "libs/color.scss";
 header {
   font-family: "Shrikhand";
   text-align: center;
@@ -14,19 +15,44 @@ body {
   width: auto;
   margin: 0;
   grid-gap: 0;
-  .recherche {
-    text-align: center;
+}
+%button {
+  background-color: darken($secondary, 40);
+  box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.2);
+  border-radius: 40px;
+  color: #fff;
+  font-weight: 800;
+  font-size: 20px;
+  padding: 15px;
+  &:hover {
+    background-color: lighten($secondary, 10);
   }
 }
+.explore {
+  text-align: center;
+  h1 {
+    font-weight: 800;
+    padding: 0 105px;
+    font-size: 30px;
+  }
+  P {
+    padding: 20px;
+    font-size: 20px;
+  }
+  .button-explore {
+    @extend %button;
+  }
+}
+
 .restaurants {
   background-color: #f2f2f2;
   padding: 1rem;
   .box-restaurants {
     .vignettes-restaurants {
-      background-color:#fff;
+      background-color: #fff;
       border-radius: 20px;
-    
-      margin-bottom: 20px;}
+      margin-bottom: 20px;
+    }
     img {
       width: 100%;
       height: 170px;
