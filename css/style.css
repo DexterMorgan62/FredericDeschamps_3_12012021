@@ -91,4 +91,31 @@ body {
   border-radius: 20px 20px 0px 0px;
 }
 
+footer {
+  background-color: #000;
+  bottom: 0;
+  margin: 0;
+}
+footer img {
+  filter: invert(100%);
+  width: 30%;
+  margin: 10px 20px;
+}
+footer .a-propos {
+  color: #a7a7a7;
+}
+footer .a-propos ul {
+  list-style: none;
+  padding: 0;
+  margin-bottom: 0;
+}
+footer .a-propos ul li i {
+  margin-left: 10px;
+}
+footer .a-propos ul li a {
+  text-decoration: none;
+  color: #a7a7a7;
+  padding: 10px;
+}
+
 /*# sourceMappingURL=style.css.map */
