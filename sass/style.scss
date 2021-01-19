@@ -22,28 +22,63 @@ body {
   border-radius: 40px;
   color: #fff;
   font-weight: 800;
-  font-size: 20px;
-  padding: 15px;
+  font-size: 15px;
+  padding: 10px;
   &:hover {
     background-color: lighten($secondary, 10);
   }
 }
 .explore {
   text-align: center;
+  background-color: $background;
+  padding-bottom: 40px;
+  input {
+    background-color: darken($background, 5);
+    border: 0;
+    width: 50%;
+    text-align: center;
+  }
+  .location {
+    background-color: darken($background, 5);
+    padding: 10px;
+  }
   h1 {
     font-weight: 800;
-    padding: 0 105px;
-    font-size: 30px;
+    font-size: 22px;
+    padding: 0 30px;
   }
   P {
-    padding: 20px;
-    font-size: 20px;
+    padding: 0 20px;
   }
   .button-explore {
     @extend %button;
   }
 }
-
+%background-tuto {
+  background-color: $background;
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+}
+.tutorial {
+  padding: 10px;
+  margin: 10px;
+  .choose {
+    @extend %background-tuto;
+    margin-bottom: 10px;
+    font-weight: 800;
+  }
+  .compose {
+    @extend %background-tuto;
+    margin-bottom: 10px;
+    font-weight: 800;
+  }
+  .eat {
+    @extend %background-tuto;
+    margin-bottom: 10px;
+    font-weight: 800;
+  }
+}
 .restaurants {
   background-color: #f2f2f2;
   padding: 1rem;

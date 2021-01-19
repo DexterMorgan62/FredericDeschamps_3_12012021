@@ -22,8 +22,8 @@ body {
   border-radius: 40px;
   color: #fff;
   font-weight: 800;
-  font-size: 20px;
-  padding: 15px;
+  font-size: 15px;
+  padding: 10px;
 }
 .explore .button-explore:hover {
   background-color: #fface8;
@@ -31,16 +31,51 @@ body {
 
 .explore {
   text-align: center;
+  background-color: #f2f2f2;
+  padding-bottom: 40px;
+}
+.explore input {
+  background-color: #e5e5e5;
+  border: 0;
+  width: 50%;
+  text-align: center;
+}
+.explore .location {
+  background-color: #e5e5e5;
+  padding: 10px;
 }
 .explore h1 {
   font-weight: 800;
-  padding: 0 105px;
-  font-size: 30px;
+  font-size: 22px;
+  padding: 0 30px;
 }
 .explore P {
-  padding: 20px;
-  font-size: 20px;
+  padding: 0 20px;
 }
+.tutorial .eat, .tutorial .compose, .tutorial .choose {
+  background-color: #f2f2f2;
+  text-align: center;
+  border-radius: 20px;
+  padding: 10px;
+}
+
+.tutorial {
+  padding: 10px;
+  margin: 10px;
+}
+.tutorial .choose {
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+.tutorial .compose {
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+.tutorial .eat {
+  margin-bottom: 10px;
+  font-weight: 800;
+}
+
 .restaurants {
   background-color: #f2f2f2;
   padding: 1rem;
