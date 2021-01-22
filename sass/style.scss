@@ -2,8 +2,13 @@
 header {
   font-family: "Shrikhand";
   text-align: center;
+  a {
+    display: inline-block;
+  }
+  img {
+    display: block;
+  }
 }
-
 body {
   margin: 0 auto;
   font-family: "Roboto";

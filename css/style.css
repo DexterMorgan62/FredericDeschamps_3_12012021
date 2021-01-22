@@ -2,6 +2,12 @@ header {
   font-family: "Shrikhand";
   text-align: center;
 }
+header a {
+  display: inline-block;
+}
+header img {
+  display: block;
+}
 
 body {
   margin: 0 auto;
