@@ -58,28 +58,30 @@ body {
 .explore P {
   padding: 0 20px;
 }
-.tutorial .eat, .tutorial .compose, .tutorial .choose {
+.tutorial ol li {
   background-color: #f2f2f2;
-  text-align: center;
   border-radius: 20px;
   padding: 10px;
 }
 
-.tutorial {
+.tutorial ol {
   padding: 10px;
+  margin: 0px;
+  list-style: none;
+}
+.tutorial ol li {
+  margin-bottom: 10px;
+  font-weight: 700;
+}
+li::before {
+  content: counter(list-item);
+  color: #fff;
+  display: inline-block;
+  height: 20px;
+  width: 20px;
   margin: 10px;
-}
-.tutorial .choose {
-  margin-bottom: 10px;
-  font-weight: 800;
-}
-.tutorial .compose {
-  margin-bottom: 10px;
-  font-weight: 800;
-}
-.tutorial .eat {
-  margin-bottom: 10px;
-  font-weight: 800;
+  border-radius: 10px;
+  background-color: #9356dc;
 }
 
 .restaurants {
