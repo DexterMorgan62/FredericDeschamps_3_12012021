@@ -78,14 +78,16 @@ body {
     }
   }
 }
-li::before {
+.tutorial li::before {
   content: counter(list-item);
   color: #fff;
-  display: inline-block;
+  display: inline-flex;
   height: 20px;
   width: 20px;
   margin: 10px;
-  border-radius: 10px;
+  transform: translate(-10px);
+  justify-content: center;
+  border-radius: 50%;
   background-color: #9356dc;
 }
 .restaurants {
