@@ -30,6 +30,7 @@
     }
   }
   .tutorial {
+    margin-bottom: 40px;
     h2 {
       margin-left: 0.5rem;
     }
@@ -72,6 +73,18 @@
         background-color: #fff;
         border-radius: 20px;
         margin-bottom: 20px;
+        .restaurant {
+          display: block;
+          padding: 0;
+          margin: 10px;
+          :after {
+            font-family: FontAwesome;
+            content: "\f004";
+            padding: 20px;
+            vertical-align: center;
+            font-size: 150%;
+          }
+        }
       }
       img {
         width: 100%;
