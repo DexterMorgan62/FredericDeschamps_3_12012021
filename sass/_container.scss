@@ -120,35 +120,3 @@
     }
   }
 }
-footer {
-  background-color: #000;
-  display: block;
-  width: auto;
-  margin: 0;
-  padding: 1.5rem 0.5rem;
-
-  .a-propos {
-    color: #a7a7a7;
-    img {
-      filter: invert(100%);
-      width: 30%;
-      margin: 0 10px;
-    }
-    ul {
-      list-style: none;
-      padding: 0;
-
-      li {
-        padding: 2px;
-        i {
-          margin-left: 10px;
-        }
-        a {
-          text-decoration: none;
-          color: #a7a7a7;
-          padding: 10px;
-        }
-      }
-    }
-  }
-}
