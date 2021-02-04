@@ -94,21 +94,28 @@
             opacity: 0.5;
           }
         }
-        .name-restaurants {
-          padding: 5%;
-          h4 {
-            padding: 0;
-            margin: 0;
+
+        .text {
+          display: flex;
+          .name-restaurants {
+            padding: 5%;
+            width: 100%;
+            h4 {
+              padding: 0;
+              margin: 0;
+            }
+            p {
+              padding: 0;
+              margin: 0;
+            }
           }
-          p {
-            padding: 0;
-            margin: 0;
-          }
-          i {
-            position: absolute;
-            top: 80%;
-            right: 10%;
-            font-size: 25px;
+          .heart {
+            display: flex;
+            padding: 5%;
+            align-items: center;
+            i {
+              font-size: 25px;
+            }
           }
         }
       }
