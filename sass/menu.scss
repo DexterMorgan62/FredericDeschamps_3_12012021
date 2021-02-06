@@ -27,32 +27,48 @@ html {
       }
       .menu {
         background-color: #f2f2f2;
-        border-radius: 20px;
+        border-radius: 30px;
         position: relative;
-        transform: translateY(-2rem);
+        transform: translateY(-4rem);
+        h2 {
+          padding: 20px;
+          font-style: oblique;
+        }
+
         i {
           position: absolute;
-          top: 5%;
+          top: 2%;
           right: 10%;
           font-size: 25px;
         }
-        padding: 10px;
-        h4 {
-          padding: 0;
-          margin: 0;
-        }
+        .starter {
+          padding: 10px;
 
-        .thumbnails {
-          background-color: #fff;
-          border-radius: 20px;
-          margin-bottom: 20px;
-          .price {
-          
-          }
+       
 
-          p {
-            padding: 0;
-            margin: 0;
+          .thumbnails {
+            display: flex;
+            background-color: #fff;
+            border-radius: 10px;
+            margin-bottom: 20px;
+            justify-content: space-between;
+            align-items: center;
+            .text {
+              padding: 10px;
+              .name{
+                margin: 0;
+              }
+              .accompaniment{
+                margin: 0
+              }
+            }
+            .price {
+              margin: 10px 10px 0;
+              font-size: 13px;
+            }
+
+            p {
+            }
           }
         }
       }
