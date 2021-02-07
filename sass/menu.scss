@@ -27,7 +27,8 @@ html {
       }
       .menu {
         background-color: #f2f2f2;
-        border-radius: 30px;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
         position: relative;
         transform: translateY(-4rem);
         h2 {
@@ -35,46 +36,84 @@ html {
           font-style: oblique;
         }
 
-        i {
-          position: absolute;
-          top: 2%;
-          right: 10%;
-          font-size: 25px;
+        .heart {
+          i {
+            position: absolute;
+            top: 2%;
+            right: 10%;
+            font-size: 25px;
+          }
         }
-        .starter {
+        .dish {
           padding: 10px;
 
-       
-
+          .title {
+            border-bottom: 2px solid $tertiary;
+            width: 15%;
+          }
           .thumbnails {
             display: flex;
             background-color: #fff;
-            border-radius: 10px;
+            border-radius: 20px;
             margin-bottom: 20px;
             justify-content: space-between;
             align-items: center;
+            position: relative;
             .text {
+              display: flex;
               padding: 10px;
-              .name{
-                margin: 0;
+              width: 100%;
+              justify-content: space-between;
+              .name {
+                h4 {
+                  margin: 0;
+                }
+
+                .accompaniment {
+                  margin: 0;
+                }
               }
-              .accompaniment{
-                margin: 0
+              .price {
+                margin: 10px 10px 0;
+                font-size: 13px;
               }
-            }
-            .price {
-              margin: 10px 10px 0;
-              font-size: 13px;
             }
 
-            p {
+            &:active {
+              .check {
+                width: 20%;
+              }
+            }
+            &:hover {
+              .check {
+                width: 20%;
+              }
+            }
+
+            .check {
+              display: flex;
+              width: 0%;
+              height: 4.6rem;
+              overflow: hidden;
+              color: white;
+              background-color: lighten($tertiary, 10);
+              justify-content: center;
+              align-items: center;
+              border-top-right-radius: 20px;
+              border-bottom-right-radius: 20px;
+              transition: width 0.4s;
             }
           }
         }
       }
-
-      .button-explore {
-        @extend %button;
+      .order {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .button-order {
+          @extend %button;
+          width: 180px;
+        }
       }
     }
     @import "footer";
