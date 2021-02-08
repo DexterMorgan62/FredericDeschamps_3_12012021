@@ -18,6 +18,23 @@ html {
       }
     }
     @import "header";
+    header {
+      .logo {
+        display: flex;
+        .return {
+          display: flex;
+          width: 17%;
+          padding: 0;
+          height: 34px;
+          background-color: white;
+          text-decoration: none;
+          color: black;
+          border: 0;
+          justify-content: left;
+          align-items: center;
+        }
+      }
+    }
     .container {
       .head {
         img {
@@ -35,7 +52,6 @@ html {
           padding: 20px;
           font-style: oblique;
         }
-
         .heart {
           i {
             position: absolute;
@@ -46,10 +62,13 @@ html {
         }
         .dish {
           padding: 10px;
-
           .title {
             border-bottom: 2px solid $tertiary;
             width: 15%;
+            margin-bottom: 10px;
+            h4 {
+              margin-bottom: 5px;
+            }
           }
           .thumbnails {
             display: flex;
@@ -71,6 +90,7 @@ html {
 
                 .accompaniment {
                   margin: 0;
+                  font-size: 12px;
                 }
               }
               .price {
