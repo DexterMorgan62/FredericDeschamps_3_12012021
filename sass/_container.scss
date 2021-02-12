@@ -75,28 +75,33 @@
     padding: 1rem;
     .box-restaurants {
       .vignettes-restaurants {
-        background-color: #fff;
-        border-radius: 20px;
-        margin-bottom: 20px;
-        position: relative;
-        .new {
-          background-color: lighten($tertiary, 5);
-          z-index: 1;
-          position: absolute;
-          width: 30%;
-          text-align: center;
-          top: 4%;
-          right: 4%;
-          h5 {
-            padding: 0%;
-            margin: 5%;
-            color: #000;
-            opacity: 0.5;
+
+          background-color: #fff;
+          border-radius: 20px;
+          margin-bottom: 20px;
+          position: relative;
+          a {
+            text-decoration: none;
+            color: black;
+          .new {
+            background-color: lighten($tertiary, 5);
+            z-index: 1;
+            position: absolute;
+            width: 30%;
+            text-align: center;
+            top: 4%;
+            right: 4%;
+            h5 {
+              padding: 0%;
+              margin: 5%;
+              color: #000;
+              opacity: 0.5;
+            }
           }
         }
-
         .text {
           display: flex;
+          justify-content: space-between;
           .name-restaurants {
             padding: 5%;
             width: 100%;
@@ -110,11 +115,8 @@
             }
           }
           .heart {
-            display: flex;
             padding: 5%;
             align-items: center;
-            position: relative;
-            margin-right: 10px;
             .heart_full {
               margin: 1px 12px 1px 2px;
               font-size: 23px;
@@ -134,7 +136,7 @@
                 display: none;
               }
               &:active {
-               display: none;
+                display: none;
               }
             }
           }
