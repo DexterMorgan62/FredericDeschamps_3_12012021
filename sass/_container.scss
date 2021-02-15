@@ -10,17 +10,16 @@
     flex-direction: none;
     align-items: center;
   }
-
   /* Media query Desktop */
   @include respond(md) {
     flex-direction: none;
   }
   .menu {
     @include respond(sm) {
-      display: flex;
       width: 100%;
-      justify-content: space-around;
-      align-items: center;
+    }
+    @include respond(md) {
+      display: block;
     }
     .explore {
       text-align: center;
@@ -79,6 +78,9 @@
         margin-left: 0.5rem;
         padding: 0;
         margin: 15px 0px 0 5px;
+        @include respond(md) {
+          text-align: center;
+        }
       }
       ol {
         counter-reset: my-counter;
@@ -86,12 +88,23 @@
         padding: 0;
         margin: 0.5rem;
         font-weight: 600;
+        @include respond(md) {
+          display: flex;
+          grid-gap: 40px;
+          justify-content: center;
+          align-items: center;
+          padding: 10px;
+        }
         li {
           counter-increment: my-counter;
           background-color: #f2f2f2;
           border-radius: 20px;
           margin-bottom: 10px;
           padding: 10px;
+          @include respond(md) {
+            margin: 0;
+            padding: 5px;
+          }
           &:before {
             content: counter(list-item);
             color: #fff;
@@ -122,6 +135,11 @@
     }
     /* Media query Desktop */
     @include respond(md) {
+      display: block;
+      text-align: left;
+    }
+    h2 {
+      margin-left: 20px;
     }
     .box-restaurants {
       /* Media query Tablettes */
@@ -129,29 +147,17 @@
         display: grid;
         grid-template-columns: repeat(2, 1fr);
         grid-template-rows: repeat(2, 1fr);
-        grid-gap: 60px;
-        margin: 20px;
-      }
-
-      /* Media query Desktop */
-      @include respond(md) {
-        display: grid;
-        grid-template-columns: repeat(4, 1fr);
-        grid-template-rows: repeat(2, 18vw);
-        grid-gap: 30px;
+        grid-gap: 40px;
+        padding: 20px;
+        margin-bottom: 40px;
       }
       .vignettes-restaurants {
         background-color: #fff;
         border-radius: 20px;
         margin-bottom: 20px;
         position: relative;
-        @include respond(md) {
+        @include respond(sm) {
           margin: 0;
-          grid-column: 1/2;
-          grid-row: 1/3;
-          display: flex;
-          flex-direction: column;
-          position: relative;
         }
         a {
           text-decoration: none;
@@ -197,7 +203,6 @@
               &:hover {
                 color: $secondary;
               }
-
               &:active {
                 color: $secondary;
               }
@@ -220,6 +225,14 @@
       width: 100%;
       height: 170px;
       border-radius: 20px 20px 0px 0px;
+      /* Media query Tablettes */
+      @include respond(sm) {
+        height: 250px;
+      }
+      /* Media query Desktop */
+      @include respond(md) {
+        height: 300px;
+      }
     }
   }
 }
