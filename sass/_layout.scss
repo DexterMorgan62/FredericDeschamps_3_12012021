@@ -1,0 +1,11 @@
+html {
+  body {
+    margin: 0 auto;
+    font-family: "Roboto";
+    %background-tuto {
+      background-color: $background;
+      border-radius: 20px;
+      padding: 10px;
+    }
+  }
+}

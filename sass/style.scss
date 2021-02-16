@@ -1,16 +1,6 @@
 @import "libs/color";
-
-html {
-  body {
-    margin: 0 auto;
-    font-family: "Roboto";
-    %background-tuto {
-      background-color: $background;
-      border-radius: 20px;
-      padding: 10px;
-    }
-    @import "header";
-    @import "container";
-    @import "footer";
-  }
-}
+@import "responsive";
+@import "layout";
+@import "header";
+@import "container";
+@import "footer";
