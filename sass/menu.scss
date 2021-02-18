@@ -28,6 +28,7 @@ html {
         img {
           width: 100%;
           height: 170px;
+          object-fit: cover;
         }
       }
       .menu {
@@ -67,7 +68,16 @@ html {
             margin-bottom: 30px;
             justify-content: space-between;
             align-items: center;
-            position: relative;
+            animation: animthumbnails 2s;
+
+            @keyframes animthumbnails {
+              0% {
+                opacity: 0;
+              }
+              100% {
+                opacity: 1;
+              }
+            }
             .text {
               display: flex;
               padding: 10px;
@@ -131,7 +141,7 @@ html {
                 box-shadow: 4px 4px 6px rgba($color: #000000, $alpha: 1);
                 background-color: lighten($secondary, 10);
                 transition: 0.4s;
-                color:#000;
+                color: #000;
                 font-weight: 1000;
                 font-size: 17px;
               }
