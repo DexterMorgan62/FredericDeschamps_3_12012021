@@ -1,0 +1,15 @@
+@import "libs/animation";
+
+.loader {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  font-size: 70px;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 999;
+  background-color: rgb(255, 255, 255);
+  animation: loader 3s ease;
+}
