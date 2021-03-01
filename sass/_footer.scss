@@ -11,6 +11,14 @@ footer {
       filter: invert(100%);
       width: 30%;
       margin: 0 10px;
+      /* Media query Tablettes */
+      @include respond(sm) {
+        width: 20%;
+      }
+      /* Media query Desktop */
+      @include respond(md) {
+        width: 10%;
+      }
     }
     ul {
       list-style: none;
