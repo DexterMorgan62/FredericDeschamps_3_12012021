@@ -99,14 +99,17 @@
           align-items: center;
           padding: 10px;
         }
-        li {
+
+        .mobile {
           counter-increment: my-counter;
           background-color: #f2f2f2;
           border-radius: 20px;
           margin-bottom: 10px;
           padding: 10px;
+          animation: animtutorial 20s forwards;
+          -webkit-animation: animtutorial 20s forwards;
           @include respond(md) {
-            padding: 5px;
+            padding-right: 15px;
             white-space: nowrap;
           }
           &:before {
@@ -124,6 +127,76 @@
           i {
             margin-right: 25px;
             width: 10px;
+            animation: animicon 20s forwards linear;
+            -webkit-animation: animicon 20s forwards linear;
+            @include respond(sm) {
+              width: 0;
+            }
+          }
+        }
+        .bars {
+          counter-increment: my-counter;
+          background-color: #f2f2f2;
+          border-radius: 20px;
+          margin-bottom: 10px;
+          padding: 10px;
+          animation:animtutorial 25s forwards linear;
+          -webkit-animation: animtutorial 25s forwards linear;
+          @include respond(md) {
+            padding-right: 15px;
+            white-space: nowrap;
+          }
+          &:before {
+            content: counter(list-item);
+            color: #fff;
+            display: inline-flex;
+            height: 20px;
+            width: 20px;
+            margin: 15px 5px 15px 25px;
+            transform: translate(-15px);
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #9356dc;
+          }
+          i {
+            margin-right: 25px;
+            width: 10px;
+            animation: animicon 25s forwards linear;
+            -webkit-animation: animicon 25s forwards linear;
+            @include respond(sm) {
+              width: 0;
+            }
+          }
+        }
+        .store {
+          counter-increment: my-counter;
+          background-color: #f2f2f2;
+          border-radius: 20px;
+          margin-bottom: 10px;
+          padding: 10px;
+          animation: animtutorial 40s forwards linear;
+          -webkit-animation: animtutorial 40s forwards linear;
+          @include respond(md) {
+            padding-right: 15px;
+            white-space: nowrap;
+          }
+          &:before {
+            content: counter(list-item);
+            color: #fff;
+            display: inline-flex;
+            height: 20px;
+            width: 20px;
+            margin: 15px 5px 15px 25px;
+            transform: translate(-15px);
+            justify-content: center;
+            border-radius: 50%;
+            background-color: #9356dc;
+          }
+          i {
+            margin-right: 25px;
+            width: 10px;
+            animation: animicon 40s forwards linear;
+            -webkit-animation: animicon 40s forwards linear;
             @include respond(sm) {
               width: 0;
             }
@@ -188,6 +261,7 @@
         .text {
           display: flex;
           justify-content: space-between;
+          padding: 10px;
           .name-restaurants {
             padding: 5%;
             width: 100%;
@@ -201,7 +275,7 @@
             }
           }
           .heart {
-            padding: 5%;
+            padding: 10px;
             align-items: center;
             cursor: pointer;
             font-size: 27px;
@@ -215,6 +289,8 @@
               .heart_full {
                 display: block;
                 color: $secondary;
+                animation: heart 1s linear;
+                -webkit-animation: heart 1s linear;
               }
 
               .heart_empty {
@@ -225,6 +301,8 @@
               .heart_full {
                 display: block;
                 color: $secondary;
+                animation: heart 1s linear;
+                -webkit-animation: heart 1s linear;
               }
 
               .heart_empty {

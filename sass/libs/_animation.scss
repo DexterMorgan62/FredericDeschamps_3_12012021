@@ -19,10 +19,32 @@
 @keyframes loader {
   0% {
     opacity: 1;
-    z-index: 999;
   }
   100% {
     opacity: 0;
-    z-index: 0;
+    display: none;
+  }
+}
+@keyframes heart {
+  0% {
+    font-size: 22px;
+  }
+  100% {
+    font-size: 27px;
+  }
+}
+@keyframes animtutorial {
+  0% {
+    background-color: #f2f2f2;
+  }
+  100% {
+    background-color: lighten($primary, 25);
+  }
+}
+@keyframes animicon {
+  0% {
+  }
+  100% {
+    color: $primary;
   }
 }
