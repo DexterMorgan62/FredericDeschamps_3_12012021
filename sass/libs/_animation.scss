@@ -36,10 +36,10 @@
 }
 @keyframes heart {
   0% {
-    font-size: 22px;
+    opacity: 0;
   }
   100% {
-    font-size: 27px;
+    opacity: 1;
   }
 }
 @keyframes animtutorial {
