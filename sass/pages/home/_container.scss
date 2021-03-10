@@ -56,8 +56,6 @@
         padding: 15px;
         transition: 0.4s;
         cursor: pointer;
-        @include respond(sm) {
-        }
         &:hover {
           box-shadow: 4px 4px 6px rgba($color: #000000, $alpha: 1);
           background-color: lighten($secondary, 10);
@@ -100,48 +98,21 @@
           padding: 10px;
         }
 
-        .mobile {
+        li {
           counter-increment: my-counter;
           background-color: #f2f2f2;
           border-radius: 20px;
           margin-bottom: 10px;
           padding: 10px;
-          animation: animtutorial 20s forwards;
-          -webkit-animation: animtutorial 20s forwards;
-          @include respond(md) {
-            padding-right: 15px;
-            white-space: nowrap;
-          }
-          &:before {
-            content: counter(list-item);
-            color: #fff;
-            display: inline-flex;
-            height: 20px;
-            width: 20px;
-            margin: 15px 5px 15px 25px;
-            transform: translate(-15px);
-            justify-content: center;
-            border-radius: 50%;
-            background-color: #9356dc;
-          }
-          i {
-            margin-right: 25px;
-            width: 10px;
-            animation: animicon 20s forwards linear;
-            -webkit-animation: animicon 20s forwards linear;
-            @include respond(sm) {
-              width: 0;
+          cursor: pointer;
+          &:hover {
+            animation: animtutorial 2s forwards linear;
+            -webkit-animation: animtutorial 2s forwards linear;
+            i {
+              animation: animicon 2s forwards linear;
+              -webkit-animation: animicon 2s forwards linear;
             }
           }
-        }
-        .bars {
-          counter-increment: my-counter;
-          background-color: #f2f2f2;
-          border-radius: 20px;
-          margin-bottom: 10px;
-          padding: 10px;
-          animation:animtutorial 25s forwards linear;
-          -webkit-animation: animtutorial 25s forwards linear;
           @include respond(md) {
             padding-right: 15px;
             white-space: nowrap;
@@ -161,42 +132,10 @@
           i {
             margin-right: 25px;
             width: 10px;
-            animation: animicon 25s forwards linear;
-            -webkit-animation: animicon 25s forwards linear;
-            @include respond(sm) {
-              width: 0;
+            &:hover {
+              animation: animicon 4s forwards linear;
+              -webkit-animation: animicon 4s forwards linear;
             }
-          }
-        }
-        .store {
-          counter-increment: my-counter;
-          background-color: #f2f2f2;
-          border-radius: 20px;
-          margin-bottom: 10px;
-          padding: 10px;
-          animation: animtutorial 40s forwards linear;
-          -webkit-animation: animtutorial 40s forwards linear;
-          @include respond(md) {
-            padding-right: 15px;
-            white-space: nowrap;
-          }
-          &:before {
-            content: counter(list-item);
-            color: #fff;
-            display: inline-flex;
-            height: 20px;
-            width: 20px;
-            margin: 15px 5px 15px 25px;
-            transform: translate(-15px);
-            justify-content: center;
-            border-radius: 50%;
-            background-color: #9356dc;
-          }
-          i {
-            margin-right: 25px;
-            width: 10px;
-            animation: animicon 40s forwards linear;
-            -webkit-animation: animicon 40s forwards linear;
             @include respond(sm) {
               width: 0;
             }

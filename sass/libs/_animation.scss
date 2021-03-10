@@ -23,6 +23,15 @@
   100% {
     opacity: 0;
     display: none;
+    z-index: -1;
+  }
+}
+@keyframes icon {
+  0% {
+  
+  }
+  100% {
+   display: none; 
   }
 }
 @keyframes heart {
