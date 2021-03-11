@@ -1,8 +1,10 @@
-@import "libs/color";
-@import "libs/animation";
-@import "pages/home/layout";
-@import "pages/home/header";
-@import "thumbnails";
-@import "responsive";
-@import "pages/menu/menulayout";
-@import "pages/footer";
+@import "abstracts/color";
+@import "abstracts/responsive";
+
+@import "components/animation";
+@import "components/thumbnails";
+
+@import "layout/header";
+@import "layout/footer";
+@import "layout/layout";
+@import "layout/menulayout";
