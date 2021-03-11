@@ -5,12 +5,7 @@
   margin: 0;
   /* Media query Tablettes */
   @include respond(sm) {
-    flex-direction: none;
     align-items: center;
-  }
-  /* Media query Desktop */
-  @include respond(md) {
-    flex-direction: none;
   }
   .menu {
     @include respond(sm) {
@@ -164,8 +159,8 @@
       /* Media query Tablettes */
       @include respond(sm) {
         display: grid;
-        grid-template-columns: repeat(2, 1fr);
-        grid-template-rows: repeat(2, 1fr);
+        grid-template-columns: (1fr, 1fr);
+        grid-template-rows: (1fr, 1fr);
         grid-gap: 40px;
         padding: 20px;
         margin-bottom: 40px;
