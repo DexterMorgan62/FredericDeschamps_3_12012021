@@ -1,166 +1,199 @@
-header {
-  .logo {
-    display: flex;
-    .return {
-      display: flex;
-      width: 17%;
-      padding: 0;
-      height: 34px;
-      background-color: white;
-      text-decoration: none;
-      color: black;
-      border: 0;
-      justify-content: left;
-      align-items: center;
+html {
+  body {
+    margin: 0 auto;
+    font-family: "Roboto";
+    @include respond(md) {
+      width: fit-content;
     }
-  }
-}
-.container {
-  background-color: #f2f2f2;
-  .head {
-    img {
-      width: 100%;
-      height: 170px;
-      object-fit: cover;
-    }
-  }
-  .menu {
-    background-color: #f2f2f2;
-    border-top-left-radius: 30px;
-    border-top-right-radius: 30px;
-    position: relative;
-    transform: translateY(-4rem);
-    h2 {
-      font-family: "shrikhand";
-      padding: 30px 0 0 10px;
-      font-size: 28px;
-      font-style: oblique;
-    }
-    .heart {
-      position: absolute;
-      top: 2%;
-      right: 10%;
-      font-size: 25px;
-
-      .heart_full {
-        display: none;
-      }
-      &:hover {
-        .heart_full {
-          display: block;
-          color: $secondary;
-          animation: heart 1s linear;
-          -webkit-animation: heart 1s linear;
-        }
-
-        .heart_empty {
-          display: none;
-        }
-      }
-      &:active {
-        .heart_full {
-          display: block;
-          color: $secondary;
-          animation: heart 1s linear;
-          -webkit-animation: heart 1s linear;
-        }
-
-        .heart_empty {
-          display: none;
+    header {
+      .logo {
+        display: flex;
+        .return {
+          display: flex;
+          width: 17%;
+          padding: 0;
+          height: 34px;
+          background-color: white;
+          text-decoration: none;
+          color: black;
+          border: 0;
+          justify-content: left;
+          align-items: center;
         }
       }
     }
-    .entrees {
-      padding: 10px;
-      .title {
-        border-bottom: 2px solid $tertiary;
-        width: 15%;
-        margin-bottom: 10px;
-        h4 {
-          margin-bottom: 5px;
+    .container {
+      background-color: #f2f2f2;
+      .head {
+        img {
+          width: 100%;
+          height: 170px;
+          object-fit: cover;
         }
-        /* Media query Tablettes */
-        @include respond(sm) {
-          width: 7%;
+      }
+      .menu {
+        background-color: #f2f2f2;
+        border-top-left-radius: 30px;
+        border-top-right-radius: 30px;
+        position: relative;
+        transform: translateY(-4rem);
+        h2 {
+          font-family: "shrikhand";
+          padding: 30px 0 0 10px;
+          font-size: 28px;
+          font-style: oblique;
+          @include respond(md) {
+            grid-row: 1;
+            grid-column: 2;
+            text-align: center;
+          }
         }
-        /* Media query Desktop */
         @include respond(md) {
-          width: 3%;
+          display: grid;
+          grid-template-columns: 1fr 1fr 1fr;
         }
-      }
-      .thumbnails {
-        @extend %thumbnails;
-        animation: animthumbnails 2s;
-      }
-    }
-    .dishes {
-      padding: 10px;
-      .title {
-        border-bottom: 2px solid $tertiary;
-        width: 15%;
-        margin-bottom: 10px;
-        h4 {
-          margin-bottom: 5px;
-        }
-        /* Media query Tablettes */
-        @include respond(sm) {
-          width: 7%;
-        }
-        /* Media query Desktop */
-        @include respond(md) {
-          width: 3%;
-        }
-      }
-      .thumbnails {
-        @extend %thumbnails;
-        animation: animthumbnails 6s;
-      }
-    }
-    .desserts {
-      padding: 10px;
-      .title {
-        border-bottom: 2px solid $tertiary;
-        width: 15%;
-        margin-bottom: 10px;
-        h4 {
-          margin-bottom: 5px;
-        }
-        /* Media query Tablettes */
-        @include respond(sm) {
-          width: 7%;
-        }
-        /* Media query Desktop */
-        @include respond(md) {
-          width: 3%;
-        }
-      }
-      .thumbnails {
-        @extend %thumbnails;
-        animation: animthumbnails 10s;
-      }
-    }
+        .heart {
+          position: absolute;
+          top: 2%;
+          right: 10%;
+          font-size: 25px;
+          @include respond(md) {
+            top: 10%;
+            right: 5%;
+          }
+          .heart_full {
+            display: none;
+          }
+          &:hover {
+            .heart_full {
+              display: block;
+              color: $secondary;
+              animation: heart 1s linear;
+              -webkit-animation: heart 1s linear;
+            }
+            .heart_empty {
+              display: none;
+            }
+          }
+          &:active {
+            .heart_full {
+              display: block;
+              color: $secondary;
+              animation: heart 1s linear;
+              -webkit-animation: heart 1s linear;
+            }
 
-    .order {
-      display: flex;
-      justify-content: center;
-      align-items: center;
-      margin-top: 30px;
-      .button-order {
-        background-color: darken($secondary, 40);
-        box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.2);
-        border-radius: 40px;
-        border: 0;
-        color: #fff;
-        font-weight: 800;
-        font-size: 15px;
-        padding: 15px;
-        &:hover {
-          box-shadow: 4px 4px 6px rgba($color: #000000, $alpha: 1);
-          background-color: lighten($secondary, 10);
-          transition: 0.4s;
-          color: #000;
+            .heart_empty {
+              display: none;
+            }
+          }
         }
-        width: 180px;
+        .entrees {
+          padding: 10px;
+          @include respond(md) {
+            grid-row: 2;
+          }
+          .title {
+            border-bottom: 2px solid $tertiary;
+            width: 15%;
+            margin-bottom: 10px;
+            h4 {
+              margin-bottom: 5px;
+            }
+            /* Media query Tablettes */
+            @include respond(sm) {
+              width: 7%;
+            }
+            /* Media query Desktop */
+            @include respond(md) {
+              width: 3%;
+            }
+          }
+          .thumbnails {
+            @extend %thumbnails;
+            animation: animthumbnails 2s;
+          }
+        }
+        .dishes {
+          padding: 10px;
+          @include respond(md) {
+            grid-row: 2;
+          }
+          .title {
+            border-bottom: 2px solid $tertiary;
+            width: 15%;
+            margin-bottom: 10px;
+            h4 {
+              margin-bottom: 5px;
+            }
+            /* Media query Tablettes */
+            @include respond(sm) {
+              width: 7%;
+            }
+            /* Media query Desktop */
+            @include respond(md) {
+              width: 3%;
+            }
+          }
+          .thumbnails {
+            @extend %thumbnails;
+            animation: animthumbnails 6s;
+          }
+        }
+        .desserts {
+          padding: 10px;
+          @include respond(md) {
+            grid-row: 2;
+          }
+          .title {
+            border-bottom: 2px solid $tertiary;
+            width: 15%;
+            margin-bottom: 10px;
+            h4 {
+              margin-bottom: 5px;
+            }
+            /* Media query Tablettes */
+            @include respond(sm) {
+              width: 7%;
+            }
+            /* Media query Desktop */
+            @include respond(md) {
+              width: 3%;
+            }
+          }
+          .thumbnails {
+            @extend %thumbnails;
+            animation: animthumbnails 10s;
+          }
+        }
+
+        .order {
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          margin-top: 30px;
+          @include respond(md) {
+            grid-row: 3;
+            grid-column: 2;
+          }
+          .button-order {
+            background-color: darken($secondary, 40);
+            box-shadow: 2px 2px 5px rgba($color: #000000, $alpha: 0.2);
+            border-radius: 40px;
+            border: 0;
+            color: #fff;
+            font-weight: 800;
+            font-size: 15px;
+            padding: 15px;
+            &:hover {
+              box-shadow: 4px 4px 6px rgba($color: #000000, $alpha: 1);
+              background-color: lighten($secondary, 10);
+              transition: 0.4s;
+              color: #000;
+            }
+            width: 180px;
+          }
+        }
       }
     }
   }
