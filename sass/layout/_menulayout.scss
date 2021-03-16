@@ -37,7 +37,7 @@ html {
         border-top-right-radius: 30px;
         position: relative;
         transform: translateY(-4rem);
-        h2 {
+        h1 {
           font-family: "shrikhand";
           padding: 30px 0 0 10px;
           font-size: 28px;
@@ -52,42 +52,53 @@ html {
           display: grid;
           grid-template-columns: 1fr 1fr 1fr;
         }
-        .heart {
-          position: absolute;
-          top: 2%;
-          right: 10%;
-          font-size: 25px;
-          @include respond(md) {
-            top: 10%;
-            right: 5%;
-          }
-          .heart_full {
-            display: none;
-          }
-          &:hover {
+          .heart {
+            position: absolute;
+            border-style: none;
+            background-color: #f2f2f2;
+            outline: none;
+            font-size: 27px;
+            align-items: center;
+            cursor: pointer;
+            font-size: 27px;
+            right: 1.5rem;
+            top: 2rem;          
+            @include respond(md) {
+              top: 10%;
+              right: 5%;
+            }
             .heart_full {
-              display: block;
-              color: $secondary;
-              animation: heart 1s linear;
-              -webkit-animation: heart 1s linear;
+              position: absolute;
+              &:first-child {
+                opacity: 0;
+                color: transparent;
+              }
+              &:last-child {
+                opacity: 1;
+              }
             }
-            .heart_empty {
-              display: none;
+            &:hover {
+              .heart_full {
+                &:first-child {
+                  color: $secondary;
+                  transition: transform 1000ms cubic-bezier(0, 0.27, 0.02, 0.99)
+                    1000ms;
+                  -webkit-transition: transform 1000ms
+                    cubic-bezier(0, 0.27, 0.02, 0.99) 1000ms;
+                  transform: scaleY(1);
+                  opacity: 1;
+                  &:last-child {
+                    transform-origin: top;
+                  }
+                }
+                .heart_empty {
+                  &:last-child {
+                    opacity: 0;
+                  }
+                }
+              }
             }
           }
-          &:active {
-            .heart_full {
-              display: block;
-              color: $secondary;
-              animation: heart 1s linear;
-              -webkit-animation: heart 1s linear;
-            }
-
-            .heart_empty {
-              display: none;
-            }
-          }
-        }
         .entrees {
           padding: 10px;
           @include respond(md) {
