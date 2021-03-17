@@ -212,7 +212,6 @@
             border-style: none;
             background-color: #fff;
             outline: none;
-
             align-items: center;
             cursor: pointer;
             font-size: 27px;
@@ -223,7 +222,6 @@
               position: absolute;
               &:first-child {
                 opacity: 0;
-                color: transparent;
               }
               &:last-child {
                 opacity: 1;
@@ -232,16 +230,13 @@
             &:hover {
               .heart_full {
                 &:first-child {
+                  font-size: 22px;
+                  right: 8px;
+                  top: 5px;
                   color: $secondary;
-                  transition: transform 1000ms cubic-bezier(0, 0.27, 0.02, 0.99)
-                    1000ms;
-                  -webkit-transition: transform 1000ms
-                    cubic-bezier(0, 0.27, 0.02, 0.99) 1000ms;
-                  transform: scaleY(1);
+                  animation: heart 3s forwards linear;
+                  -webkit-animation: heart 3s forwards linear;
                   opacity: 1;
-                  &:last-child {
-                    transform-origin: top;
-                  }
                 }
                 .heart_empty {
                   &:last-child {
