@@ -142,16 +142,6 @@
   .restaurants {
     background-color: #f2f2f2;
     padding: 1rem;
-    /* Media query Tablettes */
-    @include respond(sm) {
-      display: block;
-      text-align: center;
-    }
-    /* Media query Desktop */
-    @include respond(md) {
-      display: block;
-      text-align: left;
-    }
     h2 {
       margin-left: 20px;
     }
@@ -159,8 +149,17 @@
       /* Media query Tablettes */
       @include respond(sm) {
         display: grid;
-        grid-template-columns: 1fr 1fr;
-        grid-template-rows: 1fr 1fr;
+        grid-template-columns: repeat(2, 1fr);
+        grid-template-rows: repeat(2, 1fr);
+        grid-gap: 20px;
+        padding: 5px;
+        margin-bottom: 40px;
+      }
+      /* Media query desktop */
+      @include respond(lg) {
+        display: grid;
+        grid-template-columns: repeat(4, 1fr);
+        grid-template-rows: 1fr;
         grid-gap: 40px;
         padding: 20px;
         margin-bottom: 40px;
@@ -218,6 +217,12 @@
             position: absolute;
             right: 1.5rem;
             bottom: 2.5rem;
+            @include respond(sm) {
+              right: 0.5rem;
+            }
+            @include respond(lg) {
+              right: 0.5rem;
+            }
             .heart_full {
               position: absolute;
               &:first-child {
@@ -260,6 +265,10 @@
         /* Media query Desktop */
         @include respond(md) {
           height: 300px;
+        }
+        /* Media query large */
+        @include respond(xl) {
+          max-width: 300px;
         }
       }
     }
