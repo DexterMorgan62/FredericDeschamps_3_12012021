@@ -1,9 +1,4 @@
-html {
   body {
     margin: 0 auto;
     font-family: "Roboto";
-    @include respond(md) {
-      width: fit-content;
-    }
   }
-}
